@@ -13,9 +13,11 @@ keywords = ["LRU", "cache"]
 [features]
 default = ["hashbrown"]
 nightly = ["hashbrown", "hashbrown/nightly"]
+sgx = ["sgx_tstd"]
 
 [dependencies]
 hashbrown = { version = "0.11.2", optional = true }
+sgx_tstd = { path = "../../deps/rust-sgx-sdk/sgx_tstd", optional = true, features = ["backtrace"] }
 
 [dev-dependencies]
 scoped_threadpool = "0.1.*"
